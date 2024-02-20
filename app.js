@@ -52,7 +52,6 @@ app.get('/read', async (req,res) => {
   console.log("MyResultServer:", myResultServer[0].userName);
 
   res.render('katierenfroe-webpage', {
-  
     myResultClient: myResultServer
   });
 });
