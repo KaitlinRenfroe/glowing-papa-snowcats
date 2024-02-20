@@ -31,13 +31,13 @@ async function run() {
     // Send a ping to confirm a successful connection
     const result = await client.db("snowcats-database").collection("snowcats-collection").find().toArray();
 
-   // console.log("cxnDB result: ", result);
+   console.log("cxnDB result: ", result);
 
     return result;
 
-    await client.db("admin").command({ ping: 1 });
+    // await client.db("admin").command({ ping: 1 });
 
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    // console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error
     await client.close();
@@ -49,7 +49,7 @@ app.get('/read', async (req,res) => {
 
   let myResultServer = await run();
 
-  console.log("MyResultServer:", myResultServer[0].userName);
+  console.log("MyResultServer:", myResultServer);
 
   res.render('katierenfroe-webpage', {
     myResultClient: myResultServer
