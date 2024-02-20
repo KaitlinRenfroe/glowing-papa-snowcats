@@ -51,7 +51,7 @@ app.get('/read', async (req,res) => {
 
   console.log("MyResultServer:", myResultServer[0].userName);
 
-  res.render('index', {
+  res.render('katierenfroe-webpage', {
     myTypeClient: myTypeServer, 
     myResultClient: myResultServer
   });
@@ -61,7 +61,7 @@ run().catch(console.dir);
 
 app.get('/', function(req, res) {
 
-  res.render('index', {
+  res.render('katierenfroe-webpage', {
    
     myTypeClient: myTypeServer 
 
