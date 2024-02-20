@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-</head>
-<h1><center>Hello World from Express</center></h1>
-<body>
-    <main>
-        <h2><center>I'm Kaitlin Renfroe</center></h2>
+<h1>Hello World from Express</h1>
+
+        <h2>I'm Kaitlin Renfroe</h2>
+        <p><%= myResultClient.length %></p>
+
+        <% for (var i=0; myResultClient.length; i++ ) { %>
+          <li> <%= myResultClient[i].userName %> </li>
+          <% } %>
+
         <h3>Enneagram Test Results:</h3>
-            <p><li> I am a type one on the Enneagram test</li>
+            <p><li> I am a type one, <%= myTypeClient %>, on the Enneagram test</li>
             <li>Type one people have a good eye for detail when working in dev groups</li>
             <li>Type one people need to watch out for being too worried about making a mistake when working in dev groups</li></p> 
+
     </main>
   </body>
 </html>
