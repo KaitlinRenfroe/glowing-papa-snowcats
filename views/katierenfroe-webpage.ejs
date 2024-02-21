@@ -1,13 +1,17 @@
 <%- include('partials/html-start.ejs') %>
 
-<h1>Hello World from Express</h1>
+<h1><center> Hello World from EJS</center></h1>
 
-        <h2>I'm Kaitlin Renfroe</h2>
-        <p><%= myResultClient.length %></p>
+        <h2><center>I'm Kaitlin Renfroe</center></h2>
+        
 
-        <% for (var i=0; myResultClient.length; i++ ) { %>
-          <li> <%= myResultClient[i].userName %> </li>
-          <% } %>
+        <% for (var i=0; i< myResultClient.length; i++ ) { %>
+    
+          <p>Username from MongoDB: <%= myResultClient[i].userName %> </p>
+          <p>myResultClient Length: <%= myResultClient.length %></p>
+      
+      <% } %>
+        
 
         <h3>Enneagram Test Results:</h3>
             <p><li> I am a type one on the Enneagram test</li>
