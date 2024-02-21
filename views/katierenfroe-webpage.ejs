@@ -1,16 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-</head>
-<h1><center>Hello World from Express</center></h1>
-<body>
-    <main>
+<%- include('partials/html-start.ejs') %>
+
+<h1><center> Hello World from EJS</center></h1>
+
         <h2><center>I'm Kaitlin Renfroe</center></h2>
+        
+
+        <% for (var i=0; i< myResultClient.length; i++ ) { %>
+    
+          <p>Username from MongoDB: <%= myResultClient[i].userName %> </p>
+          <p>myResultClient Length: <%= myResultClient.length %></p>
+      
+      <% } %>
+        
+
         <h3>Enneagram Test Results:</h3>
             <p><li> I am a type one on the Enneagram test</li>
             <li>Type one people have a good eye for detail when working in dev groups</li>
             <li>Type one people need to watch out for being too worried about making a mistake when working in dev groups</li></p> 
-    </main>
-  </body>
-</html>
+
+            <%- include('partials/html-end.ejs') %>
